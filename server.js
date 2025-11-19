@@ -7,7 +7,12 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-  origin: "http://127.0.0.1:5500"
+ origin: [
+    "https://darwinortegaderecholaboral.com", 
+    "https://legaltech-assistant.onrender.com"
+  ],
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type"]
 }));
 app.use(express.json());
 
